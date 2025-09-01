@@ -1,11 +1,4 @@
-- name: Build APK
-        run: ./gradlew assembleDebug
-
-      - name: Upload APK
-        uses: actions/upload-artifact@v3
-        with:
-          name: cloudstream-apk
-          path: app/build/outputs/apk/debug/app-debug.apkname: Build APK
+name: Build APK
 
 on:
   workflow_dispatch:
@@ -38,5 +31,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: CloudStream APK
-          path: app/build/outputs/apk/debug/app-debug.apk
-
+          path: app/build/outputs/apk/debug/
