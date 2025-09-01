@@ -27,8 +27,11 @@ jobs:
       - name: Build APK
         run: ./gradlew assembleDebug
 
+      - name: List APK output (调试用，可选)
+        run: ls -R app/build/outputs/
+
       - name: Upload APK
         uses: actions/upload-artifact@v3
         with:
           name: CloudStream APK
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: app/build/outputs/apk/debug/*.apk
